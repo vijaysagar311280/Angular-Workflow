@@ -18,7 +18,9 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
+        working-directory: ./my-angular-app
         run: npm install
 
       - name: Build Angular App
+        working-directory: ./my-angular-app
         run: npx ng build --configuration production
